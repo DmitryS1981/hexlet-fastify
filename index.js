@@ -7,3 +7,10 @@ app.get('/', (req, res) => {
 app.listen( {port}, () => {
     console.log(`Example app listening on port ${port}`)
 })
+app.get('/users', (req, res) => {
+  res.send('GET /users')
+})
+
+app.post('/users', (req, res) => {
+  res.send('POST /users')
+})
