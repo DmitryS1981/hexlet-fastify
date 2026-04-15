@@ -1,0 +1,18 @@
+extends ../layouts/page.pug
+
+block content
+  h1 Courses List
+  
+  a(href='/courses/new') New Course
+  br
+  br
+  
+  if courses && courses.length > 0
+    each course in courses
+      .course-item
+        h2= course.title
+        p= course.description
+        a(href=`/courses/${course.id}`) View Details
+        hr
+  else
+    p No courses available.

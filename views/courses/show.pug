@@ -1,0 +1,17 @@
+extends ../layouts/page.pug
+
+block content
+  h1 Course Details
+  
+  if course
+    .course-details
+      h2= course.title
+      p= course.description
+      p
+        strong Course ID: 
+        = course.id
+      br
+      a(href='/courses') ← Back to Courses
+  else
+    h2 Course not found
+    a(href='/courses') ← Back to Courses
